@@ -1,0 +1,12 @@
+int 4 byte = 32 bit
+2^32 = 4294967296
+
+unsigned u = 10;
+int i = -42;
+std::cout << i + i << std::endl; // prints -84
+std::cout << u + i << std::endl; // if 32-bit ints, prints 4294967264
+
+
+14 
+
+8 4 2 1 

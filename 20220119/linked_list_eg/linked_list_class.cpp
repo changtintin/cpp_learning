@@ -16,7 +16,9 @@ class Linked_list {
         void show_all();
         void insert_head_node(int input);
         void delete_last_node();
-
+        void delete_first_node();
+        void delete_nth_node(int location);
+         
 };
 
 Linked_list::Linked_list(){
@@ -35,6 +37,7 @@ void Linked_list::insert_last_node(int value) {
         }
         tmp -> next = n;
     }
+    show_all();
 }
 
 void Linked_list::insert_nth_node(int input, int location) {
@@ -59,6 +62,7 @@ void Linked_list::insert_nth_node(int input, int location) {
             n -> next = tmp -> next;
             tmp -> next = n;
         }
+        show_all();
     }
 }
 
@@ -72,6 +76,7 @@ void Linked_list::show_all(){
         cout << "Nothing to show!" << endl;
     }
     else{
+        cout << "Linked-list: " ;
         Node* tmp = head;
         while(tmp != NULL){
             cout << tmp -> data << " ";
@@ -90,25 +95,54 @@ void Linked_list::insert_head_node(int input){
     else{
         head = n;
     }
+    show_all();
 }
 
 void Linked_list::delete_last_node(){
-    if (head->next!= NULL){
-        Node* tmp = head;
-        while(tmp -> next->next != NULL){
-            tmp = tmp -> next;
-        }
-        tmp -> next = NULL;
+    if(head == NULL){
+        cout << "Nothing to delete." << endl;
     }
     else{
-        if(head == NULL){
-            cout << "Nothing to Delete" << endl;
+        if (head->next!= NULL){
+            Node* tmp = head;
+            while(tmp -> next->next != NULL){
+                tmp = tmp -> next;
+            }
+            tmp -> next = NULL;
         }
         else{
             head = NULL;
-            cout << "The first node has been deleted." << endl;
-        } 
+            
+        }
+        show_all();
+    } 
+}
 
+void Linked_list::delete_first_node(){
+    if(head == NULL){
+        cout << "Nothing to delete." << endl;
+    }
+    else{
+        head = head -> next;
         
     }
+    show_all();
 }
+
+void Linked_list::delete_nth_node(int location){
+    if(head == NULL){
+        cout << "Nothing to delete." << endl;
+    }
+    else{
+        Node* tmp1 = head;
+        for(int i = 1; i < location - 1; i++){
+            tmp1 = tmp1 -> next;
+        }
+        Node* tmp2 = tmp1 -> next  ;
+        Node* tmp3 = tmp2 -> next ;
+        tmp2 = NULL;
+        tmp1 -> next = tmp3;
+        show_all();
+    }
+}
+

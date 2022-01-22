@@ -131,8 +131,6 @@ int main(){
     cin >> num;
     list.delete_exist_node(num);
     list.traversal();
-    list.insert_last_node(17);
-    list.insert_last_node(64);
     list.sort_list();
     list.traversal();
 }

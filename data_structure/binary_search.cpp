@@ -56,10 +56,10 @@ int main(){ //cin 要由小到大
 
     cin >> input;
     if(check(arr,input, n)){
-        cout << "Element is in index " <<binary(arr,input, n) << endl;
+        cout << "Element is in index " << binary(arr,input, n) << endl;
     }
     else {
-         cout << "Element doesn't exist in array." << endl;
+        cout << "Element doesn't exist in array." << endl;
     }
     
 }

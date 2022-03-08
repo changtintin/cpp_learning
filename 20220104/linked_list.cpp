@@ -5,17 +5,17 @@ using namespace std;
 class node{
 public:
 int num;
-node * next;
+node *next;
 };
 void Show_list(node * eg){
-    while(eg != NULL){
+    while(eg != NULL) {
         cout << eg ->num << " ";
         eg = eg -> next;
     }
     cout << endl;
 }
 void Push_front(int x , node * head){
-    node * input = NULL;
+    node *input = NULL;
     input = new node();
     input -> num = x;
     input -> next = head;
@@ -24,9 +24,9 @@ void Push_front(int x , node * head){
 }
 
 int main(){
-    node * head = NULL;
-    node * second = NULL;
-    node * third = NULL;
+    node *head = NULL;
+    node *second = NULL;
+    node *third = NULL;
 
     head = new node();
     second = new node();

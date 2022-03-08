@@ -61,15 +61,27 @@ void Stack_linked_list::push(int input){
 }
 void Stack_linked_list::pop(){
     Node* temp = head;
-    while(temp -> next -> next !=0){
-        temp = temp -> next;
+    
+    if(head == NULL){
+        cout << "Nothing to pop" << endl;
     }
-    temp -> next = NULL;
-    show_all();
+    else{
+        if(head -> next == NULL){
+            head = NULL;
+        }
+        else{
+            while(temp -> next -> next !=0){
+                temp = temp -> next;
+            }
+            temp -> next = NULL;
+        }
+        show_all();
+    }
 }
 int main(){
     Stack_linked_list new_stack;
     new_stack.push(25);
+    new_stack.pop();
     new_stack.push(211);
     new_stack.push(31);
     new_stack.push(77);

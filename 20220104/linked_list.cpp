@@ -3,9 +3,9 @@
 using namespace std;
 
 class node{
-public:
-int num;
-node *next;
+    public:
+    int num;
+    node *next;
 };
 void Show_list(node * eg){
     while(eg != NULL) {

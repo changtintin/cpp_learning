@@ -1,0 +1,68 @@
+quick sort: piviot -> 
+
+
+partition() 
+
+int pivot : the end of array
+
+int front
+
+int end
+
+int i = * ary[i]: the last num of the array which smaller than pivot 
+有數比pivot小，index(i)便往後移動(i++)，表示「所有小於pivot的數所形成的數列」又增加了一名成員。
+
+int j = * ary[j]: index compare to pivot , move from front to (end - 1)
+
+
+    front                 i  end
+                          j
+-1    0   1   2   3   4   5   6 
+__________________________________
+
+      3   1   5   2   4   6   7     ary[7]
+                             pivot
+
+(1)
+pivot  >   ary[0] (j)
+6      >   3
+
+i ++
+j ++
+
+(2)
+pivot  >   ary[1] (j)
+6      >   1
+i ++
+j ++
+
+(3)
+pivot  >   ary[2] (j)
+6      >   5
+i ++
+j ++
+
+(3)
+pivot  <   ary[3] (j)
+6      <   7
+j ++ 
+
+(3)
+pivot  >   ary[4] (j)
+6      >   2
+i ++ 
+swap (i , j)
+
+
+(4)
+pivot  >   ary[5] (j)
+6      >   4
+i ++ 
+swap (i , j)
+
+if(j==end){
+    i ++
+    swap (i , pivot)
+}
+
+

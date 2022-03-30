@@ -31,7 +31,6 @@ void quick_sort(int *ary, int front, int end){
         quick_sort(ary, front, pivot-1);
         quick_sort(ary, pivot+1, end);
     }
-    
 }
 int main(){
     int term = 10;

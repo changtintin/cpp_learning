@@ -59,8 +59,8 @@ void KMP(string pattern, string text)
         if (j == m)
         {
             cout << i - m << ' '; // if j==m it is confirmed that we have found the pattern and we output the index
-                                  // and update j as Lps of last matched character.
-            j = Lps[j - 1];
+                                  // m = pattern.length
+            j = Lps[j - 1];       // and update j as Lps of last matched character.
         }
         else if (i < n && pattern[j] != text[i]) // If there is a mismatch
         {               

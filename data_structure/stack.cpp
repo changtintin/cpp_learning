@@ -113,10 +113,11 @@ int main(){
     stk.add(2.3);
     stk.add(24.7);
     stk.add(9.1);
+    stk.show();
+
     stk.add(29.5);
     stk.add(242.5);
     stk.add(9.5);
-    stk.show();
     stk.add(6.5);
     cout << "current size: " << stk.present_size << endl;
     cout << "tail: " << stk.tail -> value << endl;

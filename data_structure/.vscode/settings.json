@@ -3,6 +3,10 @@
         "ostream": "cpp",
         "iostream": "cpp",
         "iosfwd": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "functional": "cpp",
+        "__split_buffer": "cpp",
+        "memory": "cpp",
+        "string": "cpp"
     }
 }

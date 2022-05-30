@@ -1,28 +1,22 @@
 {
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: clang++ 建置使用中檔案",
+            "label": "clang++ build active file",
+            "type": "shell",
             "command": "/usr/bin/clang++",
             "args": [
-                "-fdiagnostics-color=always",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "-std=c++17","-stdlib=libc++","-g","${workspaceFolder}/*.cpp","-o","${fileDirname}/${fileBasenameNoExtension}",
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspacefolder}"
             },
-            "problemMatcher": [
-                "$gcc"
-            ],
-            "group": {
+            "group":{
                 "kind": "build",
                 "isDefault": true
-            },
-            "detail": "偵錯工具產生的工作。"
-        }
-    ],
-    "version": "2.0.0"
+            } ,
+        },
+    ]
 }

@@ -69,7 +69,7 @@ int main(){
     int expsn_len = expsn.length();
     int leng = expsn_len;
     char tmp_ary[leng];
-    strcpy(tmp_ary, expsn.c_str() );
+    strcpy(tmp_ary, expsn.c_str());
     Stack infix_stk[leng];
     cout << "str stack: ";
     for(int i = 0; i < expsn_len + 1; i++){
@@ -130,7 +130,6 @@ int main(){
                     optr_stk[opr_index].item = infix_stk[i].item;
                     opr_index ++;
                 }
-                
             }
             else{  //nothing to compare
                 optr_stk[opr_index].item = infix_stk[i].item;
@@ -176,6 +175,4 @@ int main(){
         cout << pfx_stk[i].item << " ";
     }
     cout << endl;
-
-    
 }

@@ -1,17 +1,20 @@
 #include<iostream>
 using namespace std;
-#define b 6
 int main(){
-    char a = '7';
-    switch (a){
-    case '1' ... '8':
-        cout << "1-8"<< endl;
-        break;
-    case 9 ... 20:
-        cout << "haha" << endl;
-        break;
-    default:
-        break;
+    int a = 60;
+    do{
+        cout << a << " ";
+        a = a + 10;
+        
     }
-    cout << b << endl;
+    while(a <= 50);
+    cout << endl;
+
+    int b = 60;
+    while(b <= 50){
+        cout << b << " ";
+        b = b + 10;
+       
+    }
+    cout << endl;
 }

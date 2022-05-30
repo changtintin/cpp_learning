@@ -6,7 +6,6 @@ int Eu(int a,int b){
         return b;
     }
     return Eu(b, remainder);
-    
 }
 int main(){
     int a ,b, x, y;               
@@ -21,6 +20,4 @@ int main(){
         b = x;
     }
     cout << Eu(a,b);
-    
-        
 }

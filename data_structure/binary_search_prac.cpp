@@ -51,7 +51,6 @@ int main(){
                 else
                     right = middle - 1;
                 middle= (left + right)/2;
-
             }
             cout << "L: " << left << ", M: " << middle << ", R: " << right << endl;
         }

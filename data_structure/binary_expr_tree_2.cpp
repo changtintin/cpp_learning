@@ -31,7 +31,6 @@ template <class T1, class T2>
 class Stack{
     public:
         Node<T1,T2> *head; // top of the stack
-        
     public:
         Stack();
     public:
@@ -120,7 +119,6 @@ template <class T1, class T2>
 class Tree{
     public:
         Node<T1,T2> *root;
-        
     public:
         Tree();
     public:
@@ -147,29 +145,27 @@ void Tree<T1,T2>::evaluation(Node<T1,T2> *n, T2 *ary, T2 a, T2 b, T2 c){
     if(n != nullptr){
         evaluation(n -> left, ary, a, b, c);
         evaluation(n -> right, ary, a, b, c);
-       
-        switch (n -> itm)
-        {
-        case 'v':
-            n -> val = n -> left -> val || n -> right -> val;
-            break;
-        case '^':
-            n -> val = n -> left -> val && n -> right -> val;
-            break;
-        case '-':
-            n -> val = !(n -> right -> val);
-            break;
-        case 'x':
-            n -> val = a;
-            break;
-        case 'y':
-            n -> val = b;
-            break;
-        case 'z':
-            n -> val = c;
-            break;
-        default:
-            break;
+        switch (n -> itm){
+            case 'v':
+                n -> val = n -> left -> val || n -> right -> val;
+                break;
+            case '^':
+                n -> val = n -> left -> val && n -> right -> val;
+                break;
+            case '-':
+                n -> val = !(n -> right -> val);
+                break;
+            case 'x':
+                n -> val = a;
+                break;
+            case 'y':
+                n -> val = b;
+                break;
+            case 'z':
+                n -> val = c;
+                break;
+            default:
+                break;
         }
         if(n == root && n -> val == true){
             cout << "(x, y, z) = " << a << b << c << endl;
@@ -187,7 +183,8 @@ class BoolTree{
     public:
         BoolTree();
     public:
-        void combo(int v, int p); // num of variable and num of position for repetition permutation
+        // num of variable and num of position for repetition permutation
+        void combo(int v, int p); 
         void combo_recur(Node<T1,T2> *n, int lay);
         void traverse_leaf(Node<T1,T2> *n, int lay);
 };  
@@ -237,7 +234,6 @@ void BoolTree<T1,T2>::traverse_leaf(Node<T1,T2> *n, int lay){
         }
     }
 }
-
 
 int main(){
     string p = "xz-vy-^yxvvzy-v^";

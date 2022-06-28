@@ -19,6 +19,13 @@
         "functional": "cpp",
         "iterator": "cpp",
         "memory": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "iostream": "cpp",
+        "map": "cpp",
+        "iosfwd": "cpp",
+        "sstream": "cpp",
+        "ios": "cpp",
+        "string": "cpp",
+        "stack": "cpp"
     }
 }

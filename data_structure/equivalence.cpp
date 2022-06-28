@@ -41,7 +41,7 @@ Stack::Stack(){
 void Stack::push(Node *n){
     bool a;
     for(int i = 0; i < 12; i++){
-        if(n == (seq+ n->num)){
+        if(n == (seq + n -> num)){
             a = true;
         }
         else{
@@ -114,7 +114,7 @@ void Stack::inspect(Node *sq){
 void Stack::out_ary(){
     Node *tmp = head;
     while(tmp != NULL){
-        out[tmp->num] = true;
+        out[tmp -> num] = true;
         tmp = tmp -> next; 
     }
 }

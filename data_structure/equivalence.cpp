@@ -222,17 +222,17 @@ int main(){
         for(int j = 0; j < 12; j++){ // index j of seq[j]
             if(rd_ary[i] == j){  
                 Node *x = new Node();
-                x -> num = rd_ary[i+1];
+                x -> num = rd_ary[i + 1];
                 x -> next = NULL;
-                if(empty(seq+j)){ // if the list is empty
+                if(empty(seq + j)){ // if the list is empty
                     seq[j].next = x;
                 } 
                 else{
                     Node *tmp = seq[j].next; // seq[j] = value (not address)
                     seq[j].next = x;
-                    x-> next = tmp;
+                    x -> next = tmp;
                 }
-                int tp = rd_ary[i+1];
+                int tp = rd_ary[i + 1];
                 Node *y = new Node();
                 y -> num = rd_ary[i];
                 y -> next = NULL;

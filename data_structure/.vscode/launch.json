@@ -5,17 +5,17 @@
     "version": "0.2.0",
     "configurations": [
         {
-        "name": "c/c++ Launch",
-        "type": "cppdbg",
-        "request": "launch",
-        "program": "${workspaceFolder}/a.out",
-        "args": [],
-        "stopAtEntry": false,
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": true,
-        "MIMode": "lldb",
-        "preLaunchTask":"c++"
+            "name": "c/c++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/a.out",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": true,
+            "MIMode": "lldb",
+            "preLaunchTask":"clang++ build active file"
         }
     ]
 }

@@ -178,6 +178,7 @@ int main(){
     
     for(auto i = input_tb.begin(); i != input_tb.end(); i++)
         cout << i->first << " -> " << i -> second << endl;
+        
     cout << endl;
     ConstructList ct;
     ct.m = input_tb;

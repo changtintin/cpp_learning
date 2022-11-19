@@ -99,7 +99,7 @@ vector<vector<int>> Traverse(int W[][8], int u, int v, int k){
                                 tmp.push_back(p);
 
                                 if(e > 0){
-                                    tmp = FindVertex(W,  p, j, (e - 1), tmp);
+                                    tmp = FindVertex(W, p, j, (e - 1), tmp);
                                 }
                                 tmp.push_back(j);
                                 tmp.push_back(Count[p][j][e - 1] + W[i][p]);

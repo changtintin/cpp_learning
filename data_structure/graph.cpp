@@ -71,7 +71,7 @@ void Graph::DFS(Vertex *vt){
     tmp = vt;
     while(rd[tmp -> v] == 1){
         tmp = tmp -> next;
-        if(tmp==nullptr)
+        if(tmp == nullptr)
             break;
     }
    

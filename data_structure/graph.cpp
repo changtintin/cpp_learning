@@ -126,7 +126,6 @@ void Graph::BFS(Vertex *vt){
 }
 
 int main(){
-
     Graph gg(11);
     gg.AddEdge(0,3);
     gg.AddEdge(0,4);

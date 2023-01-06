@@ -1,11 +1,13 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.chrome.options import Options
+from webdriver_manager.chrome import ChromeDriverManager
 import pretty_errors
 
 options = Options()
 options.page_load_strategy = 'normal'
-driver = webdriver.Chrome(options = options)
+driver = webdriver.Chrome(ChromeDriverManager().install())
+
 driver.get("https://www.dcard.tw/f")
 driver.implicitly_wait(0.6)
 

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <ctime>
 using namespace std;
 void InsertSort(int *ary, int size){
     for(int i = 0;i < size; i++){
@@ -24,9 +25,9 @@ void insertion_sort(vector<int> &ary){
     int s = ary.size();
 
     for(int i = 1; i < s; i++){
-        cout << "i = " << i << endl;
+       
         for(int j = i - 1; j >= 0; j--){
-            cout << "\tj = " << j << endl;
+            
             if(ary[i] > ary[j]) {
                 ary.insert(ary.begin() + j + 1, ary[i]);
                 ary.erase(ary.begin() + i + 1);
@@ -37,8 +38,6 @@ void insertion_sort(vector<int> &ary){
                 ary.erase(ary.begin() + i + 1);
             }
         }
-        show(ary);
-        cout << "______________________" << endl;
     }
 }
 /*
@@ -135,10 +134,8 @@ void merge_sort(vector<int> &ary, int l, int r) {
     if(l == r) {
         return;
     }
-
     int m = (l + r)/2;
-
-    cout << l << " " << m << " " << r << endl;
+    
     // 排左邊
     merge_sort(ary, l, m);
     // 排右邊
@@ -174,22 +171,30 @@ int main(){
     // selection_sort(a);
     // show(a);
 
-    // vector<int> m;
-    // m = {1, 4, 16, 22, -7, 9, 12, 25, 0, 87, 44, 92, 19, 13, 7, 3};
-    // merge_sort(m, 0, m.size() - 1);
+   
+
+    clock_t start = clock();
+    vector<int> m;
+    m = {41, 34, 16, 22, -7, 1, 19, 63, 23};
+    merge_sort(m, 0, m.size() - 1);
+
+    cout << "merge sort time =" << (double)(clock() - start)/CLOCKS_PER_SEC << "s"<< endl;
+
 
     // for(int i = 0; i < m.size(); i++) {
     //     cout << m[i] << " ";
     // }
     // cout << endl;
-
-
+    clock_t tmp =clock();
     vector<int> v;
     v = {41, 34, 16, 22, -7, 1, 19, 63, 23};
     insertion_sort(v);
    
-    for(int i = 0; i < v.size(); i++) {
-        cout << v[i] << " ";
-    }
-    cout << endl;
+    
+    cout << "insertion sort time =" << (double)(clock()-tmp)/CLOCKS_PER_SEC << "s"<< endl;
+
+    // for(int i = 0; i < v.size(); i++) {
+    //     cout << v[i] << " ";
+    // }
+    // cout << endl;
 }

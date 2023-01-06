@@ -1,10 +1,11 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from webdriver_manager.chrome import ChromeDriverManager
 import pretty_errors
 
 def test_eight_components():
-    driver = webdriver.Chrome()
-
+    # driver = webdriver.Chrome()
+    driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.get("https://google.com")
 
     # title = driver.title

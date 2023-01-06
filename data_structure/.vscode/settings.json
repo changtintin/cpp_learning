@@ -27,6 +27,9 @@
         "ios": "cpp",
         "string": "cpp",
         "stack": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "ctime": "cpp",
+        "iomanip": "cpp",
+        "list": "cpp"
     }
 }
